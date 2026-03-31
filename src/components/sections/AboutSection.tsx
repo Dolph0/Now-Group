@@ -9,6 +9,7 @@ const ACTIVITIES = [
         title: 'Consultoría Integral',
         description:
             'Asesoramiento estratégico, económico y organizativo, incluyendo apoyo legal, administrativo y cumplimiento normativo.',
+        imageSrc: '/images/about_consulting_img_1774953044000.png',
         icon: (
             <path
                 strokeLinecap="round"
@@ -21,6 +22,7 @@ const ACTIVITIES = [
         title: 'Gestión de Eventos',
         description:
             'Organización y planificación integral de ferias, congresos, encuentros corporativos y actividades culturales.',
+        imageSrc: '/images/about_events_img_1774953058697.png',
         icon: (
             <path
                 strokeLinecap="round"
@@ -33,6 +35,7 @@ const ACTIVITIES = [
         title: 'Marketing y Comunicación',
         description:
             'Servicios completos de publicidad, branding, diseño gráfico e identidad corporativa, tanto online como offline.',
+        imageSrc: '/images/about_marketing_img_1774953076942.png',
         icon: (
             <path
                 strokeLinecap="round"
@@ -45,6 +48,7 @@ const ACTIVITIES = [
         title: 'Transformación Digital e IT',
         description:
             'Consultoría tecnológica, desarrollo de software, ciberseguridad, inteligencia artificial, servicios en la nube y automatización.',
+        imageSrc: '/images/about_tech_img_1774953089669.png',
         icon: (
             <path
                 strokeLinecap="round"
@@ -57,6 +61,7 @@ const ACTIVITIES = [
         title: 'Formación y Educación',
         description:
             'Impartición de programas formativos, talleres, seminarios y conferencias en modalidad presencial y online.',
+        imageSrc: '/images/about_training_img_1774953105250.png',
         icon: (
             <path
                 strokeLinecap="round"
@@ -69,6 +74,7 @@ const ACTIVITIES = [
         title: 'Gestión de Proyectos',
         description:
             'Coordinación, desarrollo y seguimiento integral de proyectos empresariales, tecnológicos y de innovación.',
+        imageSrc: '/images/about_projects_img_1774953131393.png',
         icon: (
             <path
                 strokeLinecap="round"
@@ -81,6 +87,7 @@ const ACTIVITIES = [
         title: 'Inversión y Holding',
         description:
             'Gestión de inversiones empresariales y administración de acciones o participaciones en otras sociedades nacionales o extranjeras.',
+        imageSrc: '/images/about_holding_img_1774953145970.png',
         icon: (
             <path
                 strokeLinecap="round"
@@ -93,6 +100,7 @@ const ACTIVITIES = [
         title: 'Propiedad Intelectual',
         description:
             'Creación, adquisición y comercialización de patentes, marcas, software y cualquier otro activo digital.',
+        imageSrc: '/images/about_intellectual_img_1774953161171.png',
         icon: (
             <path
                 strokeLinecap="round"
@@ -105,6 +113,7 @@ const ACTIVITIES = [
         title: 'Consideraciones Legales',
         description:
             'Las actividades profesionales se ejercen mediante intermediación y se permite la ejecución indirecta a través de otras sociedades.',
+        imageSrc: '/images/about_legal_img_1774953174819.png',
         icon: (
             <path
                 strokeLinecap="round"
@@ -113,13 +122,6 @@ const ACTIVITIES = [
             />
         ),
     },
-];
-
-/* ── Grid images ── */
-const GRID_IMAGES = [
-    { src: '/images/about-consulting.png', alt: 'Equipo de consultoría estratégica en reunión' },
-    { src: '/images/about-technology.png', alt: 'Transformación digital y tecnología' },
-    { src: '/images/about-marketing.png', alt: 'Espacio creativo de marketing y branding' },
 ];
 
 const fadeInUp = {
@@ -132,11 +134,13 @@ function ActivityCard({
     title,
     description,
     icon,
+    imageSrc,
     index,
 }: {
     title: string;
     description: string;
     icon: React.ReactNode;
+    imageSrc: string;
     index: number;
 }) {
     return (
@@ -144,51 +148,46 @@ function ActivityCard({
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.06 }}
-            className="group relative bg-white rounded-2xl p-6 border border-[var(--color-border)] hover:border-[var(--color-accent-gold)]/40 hover:shadow-lg transition-all duration-300"
+            transition={{ duration: 0.5, delay: index * 0.05 }}
+            className="group relative bg-white rounded-2xl overflow-hidden border border-[var(--color-border)] hover:border-[var(--color-accent-gold)]/40 hover:shadow-xl transition-all duration-500 flex flex-col h-full"
         >
-            {/* Icon */}
-            <div className="w-11 h-11 rounded-xl bg-[var(--color-primary-dark)] flex items-center justify-center mb-4 group-hover:bg-[var(--color-accent-gold)] transition-colors duration-300">
-                <svg
-                    className="w-5 h-5 text-[var(--color-accent-gold)] group-hover:text-white transition-colors duration-300"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={1.5}
-                    viewBox="0 0 24 24"
-                >
-                    {icon}
-                </svg>
+            {/* Image Box */}
+            <div className="relative w-full h-48 sm:h-56 overflow-hidden">
+                <Image
+                    src={imageSrc}
+                    alt={title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1128]/80 via-[#0A1128]/20 to-transparent" />
+                
+                {/* Floating Icon */}
+                <div className="absolute bottom-4 left-4 w-12 h-12 rounded-xl bg-[var(--color-primary-dark)] flex items-center justify-center border border-white/20 group-hover:bg-[var(--color-accent-gold)] transition-colors duration-300 shadow-lg z-10">
+                    <svg
+                        className="w-6 h-6 text-[var(--color-accent-gold)] group-hover:text-white transition-colors duration-300"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={1.5}
+                        viewBox="0 0 24 24"
+                    >
+                        {icon}
+                    </svg>
+                </div>
             </div>
 
-            <h3 className="text-base font-semibold text-[var(--color-text-primary)] mb-2">
-                {title}
-            </h3>
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                {description}
-            </p>
-        </motion.div>
-    );
-}
-
-/* ── Grid image block (presentational) ── */
-function GridImage({ src, alt, className = '' }: { src: string; alt: string; className?: string }) {
-    return (
-        <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className={`relative rounded-2xl overflow-hidden ${className}`}
-        >
-            <Image
-                src={src}
-                alt={alt}
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-700"
-                sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            {/* Subtle overlay for visual consistency */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary-dark)]/30 to-transparent" />
+            {/* Content Space */}
+            <div className="p-6 flex-1 flex flex-col">
+                <h3 className="text-lg font-bold text-[var(--color-text-primary)] mb-3 group-hover:text-[var(--color-accent-gold)] transition-colors duration-300">
+                    {title}
+                </h3>
+                <p className="text-[var(--color-text-secondary)] leading-relaxed text-sm flex-1">
+                    {description}
+                </p>
+            </div>
+            
+            {/* Subtle bottom border highlight */}
+            <div className="h-1 w-full bg-transparent group-hover:bg-gradient-to-r group-hover:from-[var(--color-accent-gold)] group-hover:to-yellow-300 transition-colors duration-500" />
         </motion.div>
     );
 }
@@ -234,53 +233,11 @@ export default function AboutSection() {
                     Grupo de consultoría, asesoramiento, innovación, marketing y gestión de servicios
                 </motion.p>
 
-                {/* ── Bento Grid: Images + Activities ── */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                    {/* Image 1 — tall, spans 2 rows on lg */}
-                    <div className="lg:row-span-2 min-h-[280px] md:min-h-[340px]">
-                        <GridImage
-                            src={GRID_IMAGES[0].src}
-                            alt={GRID_IMAGES[0].alt}
-                            className="h-full min-h-[280px] md:min-h-full"
-                        />
-                    </div>
-
-                    {/* Activity cards row 1 */}
-                    <ActivityCard {...ACTIVITIES[0]} index={0} />
-                    <ActivityCard {...ACTIVITIES[1]} index={1} />
-
-                    {/* Activity cards row 2 */}
-                    <ActivityCard {...ACTIVITIES[2]} index={2} />
-                    <ActivityCard {...ACTIVITIES[3]} index={3} />
-
-                    {/* Image 2 — wide, spans 2 cols on lg */}
-                    <div className="lg:col-span-2 min-h-[240px]">
-                        <GridImage
-                            src={GRID_IMAGES[1].src}
-                            alt={GRID_IMAGES[1].alt}
-                            className="h-full min-h-[240px]"
-                        />
-                    </div>
-
-                    {/* Activity cards row 3 */}
-                    <ActivityCard {...ACTIVITIES[4]} index={4} />
-
-                    {/* Activity cards row 4 */}
-                    <ActivityCard {...ACTIVITIES[5]} index={5} />
-                    <ActivityCard {...ACTIVITIES[6]} index={6} />
-
-                    {/* Image 3 */}
-                    <div className="min-h-[240px]">
-                        <GridImage
-                            src={GRID_IMAGES[2].src}
-                            alt={GRID_IMAGES[2].alt}
-                            className="h-full min-h-[240px]"
-                        />
-                    </div>
-
-                    {/* Activity cards row 5 */}
-                    <ActivityCard {...ACTIVITIES[7]} index={7} />
-                    <ActivityCard {...ACTIVITIES[8]} index={8} />
+                {/* ── Grid: Activities with Images ── */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {ACTIVITIES.map((activity, index) => (
+                        <ActivityCard key={activity.title} {...activity} index={index} />
+                    ))}
                 </div>
             </div>
         </section>
