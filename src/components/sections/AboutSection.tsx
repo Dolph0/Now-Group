@@ -217,7 +217,7 @@ export default function AboutSection() {
                         Sobre Nosotros
                     </span>
                     <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-[var(--color-text-primary)] leading-tight max-w-4xl mx-auto">
-                        Now Group es un despacho jurídico multidisciplinar, con un equipo dinámico
+                        NowNexus Group es una firma consultora y legal multidisciplinar, con un equipo dinámico
                         y altamente cualificado, que opera bajo un sistema de gestión de calidad definido.
                     </h2>
                 </motion.div>

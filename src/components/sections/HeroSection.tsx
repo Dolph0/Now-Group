@@ -24,7 +24,7 @@ export default function HeroSection() {
                     className="absolute inset-0 w-full h-full object-cover"
                     aria-hidden="true"
                 >
-                    <source src="/hero-video.mp4" type="video/mp4" />
+                    <source src="/video-hero-now-nexus-group.mp4" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
             </div>
@@ -58,7 +58,7 @@ export default function HeroSection() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
                     >
-                        El futuro de la gestión pública empieza{' '}
+                        El futuro de la gestión pública y privada empieza{' '}
                         <span className="text-[var(--color-accent-gold)]">AHORA.</span>
                     </motion.h1>
 
@@ -68,7 +68,7 @@ export default function HeroSection() {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed"
                     >
-                        Soluciones institucionales 360º. Desde la más rigurosa asesoría en derecho público y cumplimiento normativo, hasta la estrategia y digitalización de la Administración.
+                        Soluciones corporativas 360º. Desde la más rigurosa asesoría en derecho público y privado, cumplimiento normativo, hasta la estrategia y digitalización corporativa.
                     </motion.p>
 
                     <motion.div

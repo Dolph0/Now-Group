@@ -28,7 +28,7 @@ export default function ExperienceSection() {
                     >
                         <Image
                             src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80&fit=crop"
-                            alt="Equipo legal de Now Group en sesión de trabajo institucional"
+                            alt="Equipo legal de NowNexus Group en sesión de trabajo corporativa"
                             fill
                             className="object-cover"
                             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -52,7 +52,7 @@ export default function ExperienceSection() {
                             además, contamos con letrados consultores disponibles para
                             proyectos específicos. Nuestros profesionales comparten su tiempo
                             entre las principales ciudades de España, con personal
-                            especializado en las áreas clave del sector público.
+                            especializado en las áreas clave del derecho público y privado.
                         </p>
                         <div className="mt-8">
                             <a

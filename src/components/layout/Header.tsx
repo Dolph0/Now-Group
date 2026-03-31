@@ -59,9 +59,9 @@ export default function Header() {
                     onClick={(e) => handleNavClick(e, '#inicio')}
                     className={`text-2xl font-black tracking-tight transition-colors duration-300 ${isScrolled ? 'text-gray-900' : 'text-white'
                         }`}
-                    aria-label="Now Group - Inicio"
+                    aria-label="NowNexus Group - Inicio"
                 >
-                    Now Group.
+                    NowNexus Group.
                 </Link>
 
                 {/* Desktop Navigation */}

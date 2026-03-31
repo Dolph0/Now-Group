@@ -6,10 +6,10 @@ import LegalModal from '@/components/ui/LegalModal';
 
 const FOOTER_LINKS = {
     servicios: [
-        { label: 'Licitaciones Públicas', href: '#servicios' },
-        { label: 'Compliance Público', href: '#servicios' },
+        { label: 'Licitaciones y Contratos', href: '#servicios' },
+        { label: 'Compliance y Normativa', href: '#servicios' },
         { label: 'Derecho Administrativo', href: '#servicios' },
-        { label: 'Contratación Pública', href: '#servicios' },
+        { label: 'Contratación Corporativa', href: '#servicios' },
     ],
     firma: [
         { label: 'Sobre Nosotros', href: '#sobre-nosotros' },
@@ -75,10 +75,10 @@ export default function Footer() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
                         {/* Brand Column */}
                         <div className="sm:col-span-2 lg:col-span-2">
-                            <span className="text-2xl font-black tracking-tight">Now Group.</span>
+                            <span className="text-2xl font-black tracking-tight">NowNexus Group.</span>
                             <p className="mt-4 text-gray-400 text-sm leading-relaxed max-w-sm">
-                                Now Group es un despacho legal especializado en el sector público, comprometido con
-                                la excelencia en el servicio y la protección jurídica de las instituciones.
+                                NowNexus Group es una firma integral especializada en derecho público y corporativo, comprometida con
+                                la excelencia en el servicio y el desarrollo estratégico de empresas e instituciones.
                             </p>
                         </div>
 
@@ -141,7 +141,7 @@ export default function Footer() {
                 <div className="border-t border-white/10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
                         <p className="text-sm text-gray-500 text-center md:text-left">
-                            © {new Date().getFullYear()} Now Group. Todos los derechos reservados.
+                            © {new Date().getFullYear()} NowNexus Group. Todos los derechos reservados.
                         </p>
                         <div className="flex items-center gap-6 flex-wrap justify-center">
                             <button
@@ -184,7 +184,7 @@ export default function Footer() {
                 {activeModal === 'privacy' && (
                     <LegalModal title="Política de Privacidad" onClose={() => setActiveModal(null)}>
                         <h3 className="text-lg font-semibold mb-3">1. Responsable del Tratamiento</h3>
-                        <p className="mb-4 text-gray-600">Now Group, S.L. es el responsable del tratamiento de los datos personales recogidos a través de este sitio web, de acuerdo con el Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
+                        <p className="mb-4 text-gray-600">NowNexus Group, S.L. es el responsable del tratamiento de los datos personales recogidos a través de este sitio web, de acuerdo con el Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
                         <h3 className="text-lg font-semibold mb-3">2. Finalidad del Tratamiento</h3>
                         <p className="mb-4 text-gray-600">Los datos recogidos mediante el formulario de contacto serán utilizados exclusivamente para gestionar su consulta legal y mantener comunicación profesional con usted.</p>
                         <h3 className="text-lg font-semibold mb-3">3. Base Jurídica</h3>
@@ -196,11 +196,11 @@ export default function Footer() {
                 {activeModal === 'terms' && (
                     <LegalModal title="Aviso Legal" onClose={() => setActiveModal(null)}>
                         <h3 className="text-lg font-semibold mb-3">1. Datos Identificativos</h3>
-                        <p className="mb-4 text-gray-600">En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información, Now Group, S.L. informa que es titular del presente sitio web.</p>
+                        <p className="mb-4 text-gray-600">En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información, NowNexus Group, S.L. informa que es titular del presente sitio web.</p>
                         <h3 className="text-lg font-semibold mb-3">2. Propiedad Intelectual</h3>
-                        <p className="mb-4 text-gray-600">Todos los contenidos del sitio web (textos, imágenes, logotipos, diseño gráfico) son propiedad exclusiva de Now Group, S.L. y están protegidos por las leyes de propiedad intelectual e industrial.</p>
+                        <p className="mb-4 text-gray-600">Todos los contenidos del sitio web (textos, imágenes, logotipos, diseño gráfico) son propiedad exclusiva de NowNexus Group, S.L. y están protegidos por las leyes de propiedad intelectual e industrial.</p>
                         <h3 className="text-lg font-semibold mb-3">3. Limitación de Responsabilidad</h3>
-                        <p className="text-gray-600">Now Group, S.L. no se hace responsable de los daños que pudieran derivarse del uso del sitio web, ni garantiza la ausencia de virus u otros elementos que pudieran causar alteraciones.</p>
+                        <p className="text-gray-600">NowNexus Group, S.L. no se hace responsable de los daños que pudieran derivarse del uso del sitio web, ni garantiza la ausencia de virus u otros elementos que pudieran causar alteraciones.</p>
                     </LegalModal>
                 )}
                 {activeModal === 'cookies' && (

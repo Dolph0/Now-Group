@@ -11,7 +11,7 @@ export const contactFormSchema = z.object({
     .max(100, 'El cargo no puede exceder 100 caracteres'),
   entidad: z
     .string()
-    .min(2, 'La entidad pública debe tener al menos 2 caracteres')
+    .min(2, 'La entidad o empresa debe tener al menos 2 caracteres')
     .max(200, 'La entidad no puede exceder 200 caracteres'),
   email: z
     .string()

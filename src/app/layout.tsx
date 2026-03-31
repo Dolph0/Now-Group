@@ -12,28 +12,28 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Now Group | Asesoría Legal para la Administración Pública',
+  title: 'NowNexus Group | Firma Consultora y Asesoría Legal Corporativa',
   description:
-    'Now Group es un despacho jurídico especializado en derecho público. Ofrecemos servicios de licitaciones, compliance público, derecho administrativo y contratación pública para la Administración.',
+    'NowNexus Group es una firma consultora y legal multidisciplinar. Ofrecemos servicios corporativos, compliance, derecho público y privado para empresas y administraciones.',
   keywords: [
-    'Now Group',
-    'despacho legal',
-    'derecho público',
-    'licitaciones públicas',
+    'NowNexus Group',
+    'firma consultora',
+    'derecho público y privado',
+    'licitaciones y contratos',
     'compliance',
     'derecho administrativo',
-    'contratación pública',
-    'administración pública',
+    'abogados corporativos',
+    'consultoría legal',
     'asesoría jurídica',
   ],
-  authors: [{ name: 'Now Group' }],
+  authors: [{ name: 'NowNexus Group' }],
   openGraph: {
-    title: 'Now Group | Asesoría Legal para la Administración Pública',
+    title: 'NowNexus Group | Firma Consultora y Asesoría Legal',
     description:
-      'Despacho jurídico especializado en el sector público. Compromiso, experiencia y resultados.',
+      'Firma consultora y legal especializada en el sector público y privado. Compromiso, experiencia y resultados.',
     type: 'website',
     locale: 'es_ES',
-    siteName: 'Now Group',
+    siteName: 'NowNexus Group',
   },
   robots: {
     index: true,
@@ -45,19 +45,19 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LegalService',
-  name: 'Now Group',
+  name: 'NowNexus Group',
   description:
-    'Despacho jurídico especializado en derecho público y asesoría legal para la Administración Pública en España.',
+    'Firma consultora multidisciplinar y asesoría legal para empresas y administraciones en España.',
   url: 'https://nowgroup.es',
   areaServed: {
     '@type': 'Country',
     name: 'Spain',
   },
   serviceType: [
-    'Licitaciones Públicas',
-    'Compliance Público',
+    'Licitaciones y Contratos',
+    'Compliance y Normativa',
     'Derecho Administrativo',
-    'Contratación Pública',
+    'Contratación Corporativa',
   ],
   address: {
     '@type': 'PostalAddress',

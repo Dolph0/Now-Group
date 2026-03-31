@@ -88,7 +88,7 @@ export default function ContactSection() {
                         Envíenos su <span className="text-[var(--color-accent-gold)]">consulta</span>
                     </h2>
                     <p className="mt-4 text-base md:text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
-                        Complete el formulario con sus datos institucionales y nuestro equipo se pondrá en contacto a la mayor brevedad.
+                        Complete el formulario con los datos de su empresa o institución y nuestro equipo se pondrá en contacto a la mayor brevedad.
                     </p>
                 </motion.div>
 
@@ -176,7 +176,7 @@ export default function ContactSection() {
                         {/* Row 2: Entidad */}
                         <div>
                             <label htmlFor="contact-entidad" className="block text-sm font-medium text-[var(--color-text-primary)] mb-2">
-                                Entidad Pública *
+                                Entidad / Empresa *
                             </label>
                             <input
                                 id="contact-entidad"
@@ -241,7 +241,7 @@ export default function ContactSection() {
                                 {...register('asunto')}
                                 className={`w-full px-4 py-3 rounded-lg border ${errors.asunto ? 'border-red-400 bg-red-50' : 'border-gray-300'
                                     } text-[var(--color-text-primary)] text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-gold)]/50 focus:border-[var(--color-accent-gold)] transition-colors`}
-                                placeholder="Consulta sobre licitación pública"
+                                placeholder="Consulta sobre contratación o servicio legal"
                             />
                             {errors.asunto && (
                                 <p className="mt-1.5 text-sm text-red-600" role="alert">{errors.asunto.message}</p>

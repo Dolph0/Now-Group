@@ -5,22 +5,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const FAQ_ITEMS = [
     {
-        question: '¿Qué servicios legales ofrece Now Group para el sector público?',
+        question: '¿Qué servicios ofrece NowNexus Group para el sector público y privado?',
         answer:
-            'Now Group ofrece un catálogo completo de servicios jurídicos para la Administración Pública, incluyendo asesoramiento en licitaciones y contratación pública, compliance normativo, derecho administrativo, representación legal ante tribunales administrativos y consultoría en regulación gubernamental.',
+            'NowNexus Group ofrece un catálogo completo de servicios jurídicos y de consultoría para empresas y administraciones, incluyendo asesoramiento en licitaciones y contratación, compliance normativo, derecho público y privado, representación legal y consultoría estratégica.',
     },
     {
         question: '¿Cómo puedo solicitar una consulta inicial?',
         answer:
-            'Puede solicitar una consulta a través del formulario de contacto de nuestra web, proporcionando sus datos institucionales. Nuestro equipo revisará su consulta y se pondrá en contacto con usted en un plazo máximo de 48 horas laborables para programar una reunión inicial.',
+            'Puede solicitar una consulta a través del formulario de contacto de nuestra web, proporcionando los datos de su entidad o empresa. Nuestro equipo revisará su consulta y se pondrá en contacto con usted en un plazo máximo de 48 horas laborables para programar una reunión inicial.',
     },
     {
-        question: '¿Now Group trabaja con Administraciones locales, autonómicas y estatales?',
+        question: '¿NowNexus Group trabaja tanto con el sector público como con el privado?',
         answer:
-            'Sí, nuestro equipo tiene experiencia trabajando con todos los niveles de la Administración Pública: ayuntamientos, diputaciones, gobiernos autonómicos, ministerios y organismos autónomos. Adaptamos nuestro enfoque a las necesidades específicas de cada tipo de entidad.',
+            'Sí, contamos con amplia experiencia asesorando tanto a empresas privadas como a todos los niveles de la Administración Pública (ayuntamientos, diputaciones, ministerios, etc.). Adaptamos nuestro enfoque a las necesidades específicas de cada corporación.',
     },
     {
-        question: '¿Cuál es el proceso para gestionar una licitación pública?',
+        question: '¿Cuál es el proceso para gestionar una licitación o contrato?',
         answer:
             'Nuestro proceso incluye el análisis de los pliegos, la preparación de la documentación técnica y administrativa, la revisión de solvencias, la estrategia de oferta económica y el seguimiento de todo el procedimiento hasta la adjudicación, incluyendo la gestión de recursos si fuera necesario.',
     },
@@ -30,9 +30,9 @@ const FAQ_ITEMS = [
             'Absolutamente. Toda la información compartida está protegida por el secreto profesional y cumplimos estrictamente con el RGPD y la LOPDGDD. Los datos se transmiten mediante cifrado TLS 1.3 y nunca se almacenan sin su autorización expresa.',
     },
     {
-        question: '¿En qué ciudades tiene presencia Now Group?',
+        question: '¿En qué ciudades tiene presencia NowNexus Group?',
         answer:
-            'Now Group cuenta con presencia en las principales ciudades de España: Madrid, Barcelona, Sevilla y Valencia. Además, ofrecemos servicio remoto a nivel nacional para facilitar la accesibilidad desde cualquier punto del territorio.',
+            'NowNexus Group cuenta con presencia en las principales ciudades de España: Madrid, Barcelona, Sevilla y Valencia. Además, ofrecemos servicio remoto a nivel nacional para facilitar la accesibilidad desde cualquier punto del territorio.',
     },
 ];
 

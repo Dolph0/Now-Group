@@ -9,7 +9,7 @@ const VALUES = [
         number: '01',
         title: 'Garantía',
         description:
-            'Proteja sus activos valiosos y asegure su tranquilidad fortaleciendo su posición jurídica con documentos legales cuidadosamente elaborados y personalizados. Nuestra suite integral de soluciones legales está diseñada para proteger los intereses de la Administración Pública.',
+            'Proteja sus activos valiosos y asegure su tranquilidad fortaleciendo su posición jurídica con documentos legales cuidadosamente elaborados y personalizados. Nuestra suite integral de soluciones legales está diseñada para proteger los intereses de su organización.',
         hasImage: true,
         imageSrc: '/values/garantia.png',
     },
@@ -33,7 +33,7 @@ const VALUES = [
         number: '04',
         title: 'Capacidad de Respuesta',
         description:
-            'En un entorno institucional dinámico, el tiempo es crítico. Destacamos por nuestra agilidad y disposición total para ayudar a nuestros clientes, proporcionando un servicio rápido, eficiente y resolutivo ante cualquier imprevisto o exigencia.',
+            'En un entorno corporativo dinámico, el tiempo es crítico. Destacamos por nuestra agilidad y disposición total para ayudar a nuestros clientes, proporcionando un servicio rápido, eficiente y resolutivo ante cualquier imprevisto o exigencia.',
         hasImage: true,
         imageSrc: '/values/respuesta.png',
     },
@@ -165,7 +165,7 @@ export default function ValuesSection() {
                                                         <div className="relative aspect-video rounded-lg overflow-hidden">
                                                             <Image
                                                                 src={value.imageSrc || '/hero-video-fallback.jpg'}
-                                                                alt={`${value.title} - Now Group`}
+                                                                alt={`${value.title} - NowNexus Group`}
                                                                 fill
                                                                 className="object-cover"
                                                                 sizes="(max-width: 640px) 100vw, 300px"
