@@ -58,7 +58,7 @@ export default function HeroSection() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
                     >
-                        El futuro de la gestión pública y privada empieza{' '}
+                        El cambio hacia una nueva gestión empieza{' '}
                         <span className="text-[var(--color-accent-gold)]">AHORA.</span>
                     </motion.h1>
 
