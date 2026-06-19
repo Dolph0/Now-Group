@@ -16,6 +16,8 @@ const fadeInUp = {
 export default function ContactSection() {
     const [formStatus, setFormStatus] = useState<FormStatus>('idle');
     const [serverMessage, setServerMessage] = useState('');
+    const [isChecked, setIsChecked] = useState(false);
+    const [honeypotValue, setHoneypotValue] = useState('');
 
     const {
         register,
@@ -37,6 +39,16 @@ export default function ContactSection() {
     });
 
     const onSubmit = async (data: ContactFormData) => {
+        // Honeypot anti-bot mitigation
+        if (honeypotValue.trim() !== '') {
+            setFormStatus('success');
+            setServerMessage('Consulta procesada correctamente');
+            reset();
+            setIsChecked(false);
+            setHoneypotValue('');
+            return;
+        }
+
         setFormStatus('submitting');
         setServerMessage('');
 
@@ -53,6 +65,7 @@ export default function ContactSection() {
                 setFormStatus('success');
                 setServerMessage(result.message);
                 reset();
+                setIsChecked(false);
             } else if (response.status === 429) {
                 setFormStatus('error');
                 setServerMessage(result.message || 'Demasiadas peticiones. Por favor, intente más tarde.');
@@ -266,18 +279,42 @@ export default function ContactSection() {
                             )}
                         </div>
 
+                        {/* Honeypot field - hidden from users, visible to bots */}
+                        <div className="absolute opacity-0 w-0 h-0 overflow-hidden" aria-hidden="true">
+                            <label htmlFor="contact-fax-number">Fax Number</label>
+                            <input
+                                id="contact-fax-number"
+                                type="text"
+                                name="fax_number"
+                                value={honeypotValue}
+                                onChange={(e) => setHoneypotValue(e.target.value)}
+                                tabIndex={-1}
+                                autoComplete="off"
+                            />
+                        </div>
+
                         {/* RGPD Checkbox */}
                         <div>
                             <label className="flex items-start gap-3 cursor-pointer group">
                                 <input
                                     type="checkbox"
-                                    {...register('consentimientoRGPD')}
+                                    {...register('consentimientoRGPD', {
+                                        onChange: (e) => setIsChecked(e.target.checked)
+                                    })}
+                                    checked={isChecked}
                                     className={`mt-1 w-4 h-4 rounded border ${errors.consentimientoRGPD ? 'border-red-400' : 'border-gray-300'
                                         } text-[var(--color-accent-gold)] focus:ring-[var(--color-accent-gold)] cursor-pointer`}
                                 />
                                 <span className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                                     He leído y acepto la{' '}
-                                    <span className="text-[var(--color-text-primary)] underline">Política de Privacidad</span>.
+                                    <a
+                                        href="/politica-privacidad.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-[var(--color-text-primary)] underline hover:text-[var(--color-accent-gold)] transition-colors"
+                                    >
+                                        Política de Privacidad
+                                    </a>.
                                     Sus datos serán tratados conforme al RGPD y la LOPDGDD. *
                                 </span>
                             </label>
@@ -290,7 +327,7 @@ export default function ContactSection() {
                         <div>
                             <button
                                 type="submit"
-                                disabled={formStatus === 'submitting'}
+                                disabled={!isChecked || formStatus === 'submitting'}
                                 className="w-full sm:w-auto px-10 py-4 rounded-full bg-[var(--color-primary-dark)] text-white font-semibold text-base hover:bg-[var(--color-primary-darker)] disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300 cursor-pointer flex items-center justify-center gap-2"
                             >
                                 {formStatus === 'submitting' ? (

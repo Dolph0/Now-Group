@@ -144,18 +144,22 @@ export default function Footer() {
                             © {new Date().getFullYear()} NowNexus Group. Todos los derechos reservados.
                         </p>
                         <div className="flex items-center gap-6 flex-wrap justify-center">
-                            <button
-                                onClick={() => setActiveModal('privacy')}
+                            <a
+                                href="/politica-privacidad.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-sm text-gray-500 hover:text-white transition-colors cursor-pointer"
                             >
                                 Privacidad
-                            </button>
-                            <button
-                                onClick={() => setActiveModal('terms')}
+                            </a>
+                            <a
+                                href="/aviso-legal.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-sm text-gray-500 hover:text-white transition-colors cursor-pointer"
                             >
                                 Aviso Legal
-                            </button>
+                            </a>
                             <button
                                 onClick={() => setActiveModal('cookies')}
                                 className="text-sm text-gray-500 hover:text-white transition-colors cursor-pointer"
@@ -181,28 +185,7 @@ export default function Footer() {
 
             {/* Legal Modals */}
             <AnimatePresence>
-                {activeModal === 'privacy' && (
-                    <LegalModal title="Política de Privacidad" onClose={() => setActiveModal(null)}>
-                        <h3 className="text-lg font-semibold mb-3">1. Responsable del Tratamiento</h3>
-                        <p className="mb-4 text-gray-600">NowNexus Group, S.L. es el responsable del tratamiento de los datos personales recogidos a través de este sitio web, de acuerdo con el Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD).</p>
-                        <h3 className="text-lg font-semibold mb-3">2. Finalidad del Tratamiento</h3>
-                        <p className="mb-4 text-gray-600">Los datos recogidos mediante el formulario de contacto serán utilizados exclusivamente para gestionar su consulta legal y mantener comunicación profesional con usted.</p>
-                        <h3 className="text-lg font-semibold mb-3">3. Base Jurídica</h3>
-                        <p className="mb-4 text-gray-600">El tratamiento de datos se basa en el consentimiento explícito otorgado por el interesado al marcar la casilla correspondiente en el formulario de contacto.</p>
-                        <h3 className="text-lg font-semibold mb-3">4. Derechos del Interesado</h3>
-                        <p className="text-gray-600">Puede ejercer sus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad dirigiéndose a proteccion.datos@nowgroup.es.</p>
-                    </LegalModal>
-                )}
-                {activeModal === 'terms' && (
-                    <LegalModal title="Aviso Legal" onClose={() => setActiveModal(null)}>
-                        <h3 className="text-lg font-semibold mb-3">1. Datos Identificativos</h3>
-                        <p className="mb-4 text-gray-600">En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información, NowNexus Group, S.L. informa que es titular del presente sitio web.</p>
-                        <h3 className="text-lg font-semibold mb-3">2. Propiedad Intelectual</h3>
-                        <p className="mb-4 text-gray-600">Todos los contenidos del sitio web (textos, imágenes, logotipos, diseño gráfico) son propiedad exclusiva de NowNexus Group, S.L. y están protegidos por las leyes de propiedad intelectual e industrial.</p>
-                        <h3 className="text-lg font-semibold mb-3">3. Limitación de Responsabilidad</h3>
-                        <p className="text-gray-600">NowNexus Group, S.L. no se hace responsable de los daños que pudieran derivarse del uso del sitio web, ni garantiza la ausencia de virus u otros elementos que pudieran causar alteraciones.</p>
-                    </LegalModal>
-                )}
+
                 {activeModal === 'cookies' && (
                     <LegalModal title="Política de Cookies" onClose={() => setActiveModal(null)}>
                         <h3 className="text-lg font-semibold mb-3">1. ¿Qué son las cookies?</h3>
