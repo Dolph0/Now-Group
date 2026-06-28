@@ -15,7 +15,6 @@ const FOOTER_LINKS = {
         { label: 'Sobre Nosotros', href: '#sobre-nosotros' },
         { label: 'Equipo', href: '#servicios' },
         { label: 'Experiencia', href: '#experiencia' },
-        { label: 'Contacto', href: '#contacto' },
     ],
     compania: [
         { label: 'Blog', href: '#' },
@@ -75,7 +74,7 @@ export default function Footer() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
                         {/* Brand Column */}
                         <div className="sm:col-span-2 lg:col-span-2">
-                            <span className="text-2xl font-black tracking-tight">NowNexus Group.</span>
+                            <span className="text-2xl font-black tracking-tight">NowNexus<br/>Group.</span>
                             <p className="mt-4 text-gray-400 text-sm leading-relaxed max-w-sm">
                                 NowNexus Group es una firma integral especializada en derecho público y corporativo, comprometida con
                                 la excelencia en el servicio y el desarrollo estratégico de empresas e instituciones.
@@ -144,14 +143,6 @@ export default function Footer() {
                             © {new Date().getFullYear()} NowNexus Group. Todos los derechos reservados.
                         </p>
                         <div className="flex items-center gap-6 flex-wrap justify-center">
-                            <a
-                                href="/politica-privacidad.pdf"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-sm text-gray-500 hover:text-white transition-colors cursor-pointer"
-                            >
-                                Privacidad
-                            </a>
                             <a
                                 href="/aviso-legal.pdf"
                                 target="_blank"

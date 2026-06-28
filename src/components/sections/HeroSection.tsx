@@ -3,10 +3,7 @@
 import { motion } from 'framer-motion';
 
 export default function HeroSection() {
-    const handleScrollToContact = (event: React.MouseEvent<HTMLAnchorElement>) => {
-        event.preventDefault();
-        document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
-    };
+
 
     return (
         <section
@@ -71,23 +68,6 @@ export default function HeroSection() {
                         Soluciones corporativas 360º. Desde la más rigurosa asesoría en derecho público y privado, cumplimiento normativo, hasta la estrategia y digitalización corporativa.
                     </motion.p>
 
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.6 }}
-                        className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4"
-                    >
-                        <a
-                            href="#contacto"
-                            onClick={handleScrollToContact}
-                            className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/40 text-white font-semibold text-base hover:bg-white/10 transition-all duration-300"
-                        >
-                            Hablemos
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-                            </svg>
-                        </a>
-                    </motion.div>
                 </div>
             </div>
         </section>

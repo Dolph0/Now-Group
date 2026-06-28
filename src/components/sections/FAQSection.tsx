@@ -12,7 +12,7 @@ const FAQ_ITEMS = [
     {
         question: '¿Cómo puedo solicitar una consulta inicial?',
         answer:
-            'Puede solicitar una consulta a través del formulario de contacto de nuestra web, proporcionando los datos de su entidad o empresa. Nuestro equipo revisará su consulta y se pondrá en contacto con usted en un plazo máximo de 48 horas laborables para programar una reunión inicial.',
+            'Puede solicitar una consulta enviándonos un correo a hello@nownexusgroup.com con los datos de su entidad o empresa. Nuestro equipo revisará su consulta y se pondrá en contacto con usted en un plazo máximo de 48 horas laborables para programar una reunión inicial.',
     },
     {
         question: '¿NowNexus Group trabaja tanto con el sector público como con el privado?',

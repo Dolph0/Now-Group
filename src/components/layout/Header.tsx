@@ -9,7 +9,6 @@ const NAV_LINKS = [
     { label: 'Sobre Nosotros', href: '#sobre-nosotros' },
     { label: 'Servicios', href: '#servicios' },
     { label: 'Experiencia', href: '#experiencia' },
-    { label: 'Contacto', href: '#contacto' },
 ];
 
 export default function Header() {
@@ -61,7 +60,7 @@ export default function Header() {
                         }`}
                     aria-label="NowNexus Group - Inicio"
                 >
-                    NowNexus Group.
+                    NowNexus<br/>Group.
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -78,21 +77,6 @@ export default function Header() {
                         </a>
                     ))}
                 </nav>
-
-                {/* Desktop CTA */}
-                <a
-                    href="#contacto"
-                    onClick={(e) => handleNavClick(e, '#contacto')}
-                    className={`hidden lg:inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${isScrolled
-                            ? 'bg-gray-900 text-white hover:bg-gray-800'
-                            : 'border border-white/40 text-white hover:bg-white/10'
-                        }`}
-                >
-                    Hablemos
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-                    </svg>
-                </a>
 
                 {/* Mobile Hamburger */}
                 <button
@@ -146,16 +130,6 @@ export default function Header() {
                                     {link.label}
                                 </motion.a>
                             ))}
-                            <motion.a
-                                href="#contacto"
-                                onClick={(e) => handleNavClick(e, '#contacto')}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: NAV_LINKS.length * 0.1 }}
-                                className="mt-4 px-8 py-3 rounded-full border border-white/40 text-white font-semibold hover:bg-white/10 transition-all"
-                            >
-                                Hablemos →
-                            </motion.a>
                         </nav>
                     </motion.div>
                 )}

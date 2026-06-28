@@ -54,14 +54,6 @@ export default function ExperienceSection() {
                             entre las principales ciudades de España, con personal
                             especializado en las áreas clave del derecho público y privado.
                         </p>
-                        <div className="mt-8">
-                            <a
-                                href="#contacto"
-                                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
-                            >
-                                Ver Más
-                            </a>
-                        </div>
                     </motion.div>
                 </div>
             </div>
