@@ -35,7 +35,7 @@ export default function HeroSection() {
                     muted
                     playsInline
                     onEnded={handleVideoEnded}
-                    className="absolute inset-0 w-full h-full object-cover md:hidden"
+                    className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-auto md:hidden"
                     aria-hidden="true"
                 >
                     <source src="/video-hero-now-nexus-group-mobile.mp4" type="video/mp4" />
