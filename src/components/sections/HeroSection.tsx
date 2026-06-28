@@ -13,15 +13,27 @@ export default function HeroSection() {
         >
             {/* Background Video */}
             <div className="absolute inset-0 z-0">
+                {/* Desktop Video */}
                 <video
                     autoPlay
                     loop
                     muted
                     playsInline
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover hidden md:block"
                     aria-hidden="true"
                 >
                     <source src="/video-hero-now-nexus-group.mp4" type="video/mp4" />
+                </video>
+                {/* Mobile Video */}
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover md:hidden"
+                    aria-hidden="true"
+                >
+                    <source src="/video-hero-now-nexus-group-mobile.mp4" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
             </div>
