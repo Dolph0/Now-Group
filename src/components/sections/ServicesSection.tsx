@@ -15,8 +15,7 @@ export default function ServicesSection() {
             aria-label="Servicios"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* View More */}
-                <motion.div
+
             </div>
         </section>
     );
