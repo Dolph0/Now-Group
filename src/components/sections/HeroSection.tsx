@@ -3,8 +3,13 @@
 import { motion } from 'framer-motion';
 
 export default function HeroSection() {
-
-
+    const handleVideoEnded = (e: React.SyntheticEvent<HTMLVideoElement>) => {
+        const video = e.currentTarget;
+        setTimeout(() => {
+            video.currentTime = 0;
+            video.play().catch(() => {});
+        }, 4000);
+    };
     return (
         <section
             id="inicio"
@@ -16,9 +21,9 @@ export default function HeroSection() {
                 {/* Desktop Video */}
                 <video
                     autoPlay
-                    loop
                     muted
                     playsInline
+                    onEnded={handleVideoEnded}
                     className="absolute inset-0 w-full h-full object-cover hidden md:block"
                     aria-hidden="true"
                 >
@@ -27,9 +32,9 @@ export default function HeroSection() {
                 {/* Mobile Video */}
                 <video
                     autoPlay
-                    loop
                     muted
                     playsInline
+                    onEnded={handleVideoEnded}
                     className="absolute inset-0 w-full h-full object-cover md:hidden"
                     aria-hidden="true"
                 >
