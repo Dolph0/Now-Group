@@ -32,7 +32,7 @@ const FAQ_ITEMS = [
     {
         question: '¿En qué ciudades tiene presencia NowNexus Group?',
         answer:
-            'NowNexus Group cuenta con presencia en las principales ciudades de España: Madrid, Barcelona, Sevilla y Valencia. Además, ofrecemos servicio remoto a nivel nacional para facilitar la accesibilidad desde cualquier punto del territorio.',
+            'NowNexus Group tiene su sede principal en Canarias y cuenta con presencia a través de colaboradores en Madrid, Barcelona, Valencia, Alicante, Bilbao, Vitoria y Málaga. Además, ofrecemos servicio remoto a nivel nacional para facilitar la accesibilidad desde cualquier punto del territorio.',
     },
 ];
 

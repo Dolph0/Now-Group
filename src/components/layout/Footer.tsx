@@ -6,10 +6,10 @@ import LegalModal from '@/components/ui/LegalModal';
 
 const FOOTER_LINKS = {
     servicios: [
-        { label: 'Licitaciones y Contratos', href: '#servicios' },
-        { label: 'Compliance y Normativa', href: '#servicios' },
-        { label: 'Derecho Administrativo', href: '#servicios' },
-        { label: 'Contratación Corporativa', href: '#servicios' },
+        { label: 'Derecho Público', href: '#servicios' },
+        { label: 'Derecho Corporativo', href: '#servicios' },
+        { label: 'Consultoría Integral', href: '#servicios' },
+        { label: 'Desarrollo Estratégico', href: '#servicios' },
     ],
     firma: [
         { label: 'Sobre Nosotros', href: '#sobre-nosotros' },
