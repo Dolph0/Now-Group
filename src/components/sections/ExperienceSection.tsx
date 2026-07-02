@@ -48,8 +48,8 @@ export default function ExperienceSection() {
                             <span className="text-[var(--color-accent-gold)]">Clase Mundial</span>
                         </h2>
                         <p className="mt-6 text-base md:text-lg text-[var(--color-text-secondary)] leading-relaxed">
-                            Nuestro equipo incluye socios, asociados y personal de apoyo;
-                            además, contamos con letrados consultores disponibles para
+                            Nuestro equipo incluye asociados y personal de apoyo;
+                            además, contamos con letrados y economistas consultores disponibles para
                             proyectos específicos. Nuestros profesionales comparten su tiempo
                             entre las principales ciudades de España, con personal
                             especializado en las áreas clave del derecho público y privado.

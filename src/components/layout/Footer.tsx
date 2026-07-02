@@ -139,7 +139,7 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="border-t border-white/10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-                        <p className="text-sm text-gray-500 text-center md:text-left">
+                        <p className="text-sm text-gray-500 text-center md:text-left" suppressHydrationWarning>
                             © {new Date().getFullYear()} NowNexus Group. Todos los derechos reservados.
                         </p>
                         <div className="flex items-center gap-6 flex-wrap justify-center">
@@ -157,18 +157,6 @@ export default function Footer() {
                             >
                                 Política de Cookies
                             </button>
-                        </div>
-                        <div className="flex items-center gap-4">
-                            {SOCIAL_LINKS.map((social) => (
-                                <a
-                                    key={social.label}
-                                    href={social.href}
-                                    aria-label={social.label}
-                                    className="text-gray-500 hover:text-white transition-colors duration-200"
-                                >
-                                    {social.icon}
-                                </a>
-                            ))}
                         </div>
                     </div>
                 </div>

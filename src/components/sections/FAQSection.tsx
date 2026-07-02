@@ -7,7 +7,7 @@ const FAQ_ITEMS = [
     {
         question: '¿Qué servicios ofrece NowNexus Group para el sector público y privado?',
         answer:
-            'NowNexus Group ofrece un catálogo completo de servicios jurídicos y de consultoría para empresas y administraciones, incluyendo asesoramiento en licitaciones y contratación, compliance normativo, derecho público y privado, representación legal y consultoría estratégica.',
+            'NowNexus Group ofrece un catálogo completo de servicios jurídicos y de consultoría para empresas y administraciones, incluyendo asesoramiento en licitaciones y contratación, compliance normativo, derecho público y privado, representación legal y consultoría estratégica. Además ofrece servicios de marca y comunicación, formación y gestión de eventos corporativos.',
     },
     {
         question: '¿Cómo puedo solicitar una consulta inicial?',

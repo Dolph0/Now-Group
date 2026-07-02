@@ -34,6 +34,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_ES',
     siteName: 'NowNexus Group',
+    images: [
+      {
+        url: '/og-image.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'NowNexus Group',
+      },
+    ],
   },
   robots: {
     index: true,
